@@ -12,7 +12,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        QiCodeApi.init(this, "key_xxxxxxxxxxx", "secret_xxxxxxxxxxxxxx");//test
-//        QiCodeApi.init(this, "key_xxxxxxxxxxxxxxx", "secret_xxxxxxxxxxxxxx");
+        //测试版、发布版的商户key和秘钥不同，注意打正式包的时候换成发布版的商户key和秘钥
+        QiCodeApi.init(this, "key_xxxxxxxxxxx", "secret_xxxxxxxxxxxxxx");
     }
 }
