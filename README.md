@@ -73,3 +73,5 @@ QiCodeApi.init(this, "key_xxxxxxxxxxx", "secret_xxxxxxxxxxxxxx");
 ###联系我们
 [官方网站:http://www.artsignpro.com/](http://www.artsignpro.com/)
 
+[艺术签名专业版:http://zhushou.360.cn/detail/index/soft_id/2650346?recrefer=SE_D_艺术签名专业版](http://zhushou.360.cn/detail/index/soft_id/2650346?recrefer=SE_D_艺术签名专业版)
+
