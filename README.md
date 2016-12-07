@@ -4,6 +4,10 @@
 
 ----------
 
+
+##demo效果
+
+![ArtSignProDemo:The demo for ArtSignProSdk](https://raw.githubusercontent.com/o0starshine0o/qicodesignsdkdemo/master/device-2016-12-07-120313.png)
 ## 接入准备
 1.和开发者(tohys@qq.com)联系,拿到测试版和发布版的商户key和secret,并将app包名注册到商务后台。
 2.开发环境:Android Studio + Gradle
