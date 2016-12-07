@@ -72,12 +72,9 @@ QiCodeApi.init(this, "key_xxxxxxxxxxx", "secret_xxxxxxxxxxxxxx");
 ```
 2>嵌入Fragement:
 ```Android
- findViewById(R.id.tv).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                QiCodeApi.invokeSignPage(MainActivity.this);
-            }
-        });
+ FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.ll_content, new ExpertSignListFragment());
+        fragmentTransaction.commit();
 ```
 ----------
 ###联系我们
