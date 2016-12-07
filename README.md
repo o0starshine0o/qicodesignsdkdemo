@@ -61,6 +61,8 @@ QiCodeApi.init(this, "key_xxxxxxxxxxx", "secret_xxxxxxxxxxxxxx");
 ***注意:app的debug版本自动开启sdk的测试模式，测试模式中的支付功能也会调用支付的测试组件,不会真正产生交易;app的签名包自动开启sdk的正式模式,会调起正式的支付功能组件;商户的key和秘钥有两套:测试版和正式版,前者用于debug包,后者用于正式的签名包,产品上线时，请务必换成正式的商户key和secret.测试环境和正式环境采用的后台数据库不一样，所以由测试切到正式环境,需要卸载app，重新登录！***
 
 2>调起签名页面API:
+
+1.调起Activity
 ```Android
  findViewById(R.id.tv).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +70,12 @@ QiCodeApi.init(this, "key_xxxxxxxxxxx", "secret_xxxxxxxxxxxxxx");
                 QiCodeApi.invokeSignPage(MainActivity.this);
             }
         });
+```
+2.嵌入Fragement:
+```Android
+ FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.ll_content, new ExpertSignListFragment());
+        fragmentTransaction.commit();
 ```
 ----------
 ###联系我们
