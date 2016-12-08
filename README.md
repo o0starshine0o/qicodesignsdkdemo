@@ -14,44 +14,11 @@
 3.组件包qicode-sign.aar,位置demo工程的libs目录下
 
 ### 接入流程
-1.buid.gradle配置
-aar依赖:
+1.build.gradle配置
 ```gradle
-android {
+dependencies {
     ...
-    repositories {
-        flatDir {
-            dirs 'libs'
-        }
-    }
-    ...
-}
-```
-aar包及第三方依赖库配置:
-```gradle
-android {
-    ...
-    compile(name:'qicode-sign', ext:'aar')
-    // 进度条
-    compile 'com.lsjwzh:materialloadingprogressbar:0.5.6-RELEASE'
-    // Gson
-    compile 'com.google.code.gson:gson:2.4'
-    // xUtils 用于网络请求
-    compile 'com.jiechic.library:xUtils:2.6.14'
-    // 侧滑返回
-    compile 'com.loopeer.android.thirdparty:swipe-back-layout:1.0'
-    // material设计
-    compile 'com.github.rey5137:material:1.1.1'
-    // facebook的图片加载
-    compile 'com.facebook.fresco:fresco:0.5.1'
-    // ping++
-    compile 'com.pingxx:pingpp-core:2.1.6'
-    compile 'com.pingxx:pingpp-alipay:2.1.6'
-    compile 'com.pingxx:pingpp-wxpay:2.1.5'
-    // RecyclerView
-    compile 'com.android.support:recyclerview-v7:25.0.0'
-    // 签字板
-    compile 'com.github.gcacace:signature-pad:1.0.1'
+    compile 'com.qicode:qicode-sign:1.0.1'
     ...
 }
 ```
