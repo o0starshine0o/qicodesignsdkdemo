@@ -11,7 +11,6 @@
 ## 接入准备
 1.和开发者(tohys@qq.com)联系,拿到测试版和发布版的商户key和secret,并将app包名注册到商务后台。
 2.开发环境:Android Studio + Gradle
-3.组件包qicode-sign.aar,位置demo工程的libs目录下
 
 ### 接入流程
 1.build.gradle配置
