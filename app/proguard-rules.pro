@@ -7,37 +7,19 @@
 -keep public class * extends android.content.BroadcastReceiver
 # 如果有引用v4包可以添加下面这行
 -keep public class * extends android.support.v4.app.Fragment
-#########TODO revert#######################################
-#########TODO revert#######################################
 -dontwarn com.facebook.**
 -keep class com.facebook.**  {* ;}
 -keep enum com.facebook.**
 -keep public interface com.facebook.**
--keep public class javax.**
+-keep class javax.**  {* ;}
 
 # apache
 -keep class org.apache.** {*; }
 # xutils
 -keep class com.lidroid.xutils.**
 
--keep class com.mob.**  {* ;}
--keep class com.rey.**  {* ;}
--keep class com.github.**  {* ;}
--keep class com.google.**  {* ;}
--keep class com.flaviofaria.**  {* ;}
--keep class com.astuetz.**  {* ;}
--keep class com.bartoszlipinski.**  {* ;}
--keep class com.nineoldandroids.**  {* ;}
--keep class com.rey.**  {* ;}
--keep class com.lsjwzh.**  {* ;}
--keep class net.**  {* ;}
--keep class cn.**  {* ;}
--keep class io.**  {* ;}
--keep class fr.**  {* ;}
--keep class com.squareup.**  {* ;}
--keep class com.lidoid.**  {* ;}
-#TODO
--keep class javax.**  {* ;}
+#########TODO revert#######################################
+#########TODO revert#######################################
 -keep class android.webkit.**  {* ;}
 # 和服务器对接的数据
 -keep class com.chenming.domain.**  {* ; }
