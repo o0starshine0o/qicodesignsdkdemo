@@ -10,37 +10,16 @@
 #########TODO revert#######################################
 #########TODO revert#######################################
 -dontwarn com.facebook.**
--keep class com.facebook.**
+-keep class com.facebook.**  {* ;}
 -keep enum com.facebook.**
 -keep public interface com.facebook.**
 -keep public class javax.**
-# 友盟统计
--keepclassmembers class * {
-   public <init>(org.json.JSONObject);
-}
 
 # apache
 -keep class org.apache.** {*; }
 # xutils
 -keep class com.lidroid.xutils.**
 
-# 支付宝
--keep class com.alipay.android.app.IAliPay{*;}
--keep class com.alipay.android.app.IAlixPay{*;}
--keep class com.alipay.android.app.IRemoteServiceCallback{*;}
--keep class com.alipay.android.app.lib.ResourceMap{*;}
--keep class com.alipay.android.app.IAlixPay$Stub{*;}
--keep class com.alipay.android.app.IRemoteServiceCallback$Stub{*;}
--keep class com.alipay.sdk.app.PayTask{ public *;}
--keep class com.alipay.sdk.app.AuthTask{ public *;}
-# 信鸽推送
--keep class com.tencent.android.tpush.**  {* ;}
--keep class com.tencent.mid.**  {* ;}
-# 自己项目特殊处理代码
-# 微信
--keep class com.tencent.**  {* ;}
-
--keep class com.facebook.**  {* ;}
 -keep class com.mob.**  {* ;}
 -keep class com.rey.**  {* ;}
 -keep class com.github.**  {* ;}
