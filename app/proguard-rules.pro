@@ -3,71 +3,27 @@
 -keep public class * extends android.app.Fragment
 -keep public class * extends android.app.Activity
 -keep public class * extends android.app.Application
-#########TODO revert#######################################
+
 -keep public class * extends android.content.BroadcastReceiver
-#########TODO revert#######################################
 # 如果有引用v4包可以添加下面这行
 -keep public class * extends android.support.v4.app.Fragment
-# 忽略警告
--ignorewarning
-#####################记录生成的日志数据,gradle build时在本项目根目录输出################
-# apk 包内所有 class 的内部结构
--dump class_files.txt
-# 未混淆的类和成员
--printseeds seeds.txt
-# 列出从 apk 中删除的代码
--printusage unused.txt
-# 混淆前后的映射
--printmapping mapping.txt
-#####################记录生成的日志数据，gradle build时 在本项目根目录输出-end################
+#########TODO revert#######################################
+#########TODO revert#######################################
+-dontwarn com.facebook.**
+-keep class com.facebook.**
+-keep enum com.facebook.**
+-keep public interface com.facebook.**
+-keep public class javax.**
+# 友盟统计
+-keepclassmembers class * {
+   public <init>(org.json.JSONObject);
+}
 
 # apache
 -keep class org.apache.** {*; }
 # xutils
 -keep class com.lidroid.xutils.**
 
-#===================友盟分享start================
--dontshrink
--dontoptimize
--dontwarn com.google.android.maps.**
--dontwarn android.webkit.WebView
--dontwarn com.umeng.**
--dontwarn com.tencent.weibo.sdk.**
--dontwarn com.facebook.**
-
-
--keep enum com.facebook.**
--keepattributes Exceptions,InnerClasses,Signature
--keepattributes *Annotation*
--keepattributes SourceFile,LineNumberTable
-
--keep public interface com.facebook.**
--keep public interface com.tencent.**
--keep public interface com.umeng.socialize.**
--keep public interface com.umeng.socialize.sensor.**
--keep public interface com.umeng.scrshot.**
-
--keep public class com.umeng.socialize.* {*;}
--keep public class javax.**
--keep public class android.webkit.**
-
--keep class com.facebook.**
--keep class com.umeng.scrshot.**
--keep public class com.tencent.** {*;}
--keep class com.umeng.socialize.sensor.**
-
--keep class com.tencent.mm.sdk.modelmsg.WXMediaMessage {*;}
-
--keep class com.tencent.mm.sdk.modelmsg.** implements com.tencent.mm.sdk.modelmsg.WXMediaMessage$IMediaObject {*;}
-
--keep class im.yixin.sdk.api.YXMessage {*;}
--keep class im.yixin.sdk.api.** implements im.yixin.sdk.api.YXMessage$YXMessageData{*;}
-
-#===================友盟分享end==================
-# 友盟统计
--keepclassmembers class * {
-   public <init>(org.json.JSONObject);
-}
 # 支付宝
 -keep class com.alipay.android.app.IAliPay{*;}
 -keep class com.alipay.android.app.IAlixPay{*;}
