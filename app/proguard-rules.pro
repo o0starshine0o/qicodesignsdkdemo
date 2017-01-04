@@ -1,12 +1,12 @@
 
-# 保持哪些类不被混淆
+#注册android类
 -keep public class * extends android.app.Fragment
 -keep public class * extends android.app.Activity
 -keep public class * extends android.app.Application
-
 -keep public class * extends android.content.BroadcastReceiver
 # 如果有引用v4包可以添加下面这行
 -keep public class * extends android.support.v4.app.Fragment
+#fresco
 -dontwarn com.facebook.**
 -keep class com.facebook.**  {* ;}
 -keep enum com.facebook.**
@@ -19,20 +19,14 @@
 # xutils
 -keep class com.lidroid.xutils.**
 
-#########TODO revert#######################################
--keep class com.qicode.mylibrary.activity.wxapi.WXEntryActivity{* ;}
-#########TODO revert#######################################
-# do not warning
 -dontwarn com.alipay.**
 -dontwarn com.rey.**
 
 # 和服务器对接的数据
 -keep class com.chenming.domain.**  {* ; }
 -keep class com.chenming.model.**  {* ; }
-# 如果引用了v4或者v7包
 -dontwarn android.support.**
-############混淆保护自己项目的部分代码以及引用的第三方jar包library-end##################
-
+############混淆保护自己项目的部分代码##################
 -keep public class * extends android.view.View {
     public <init>(android.content.Context);
     public <init>(android.content.Context, android.util.AttributeSet);
@@ -51,7 +45,7 @@
 
 # 和服务器对接的数据
 -keep class com.qicode.mylibrary.model.** {* ;}
-
+#ping++ start
 -dontwarn  com.ta.utdid2.**
 -keep class com.ta.utdid2.** {*;}
 
@@ -69,3 +63,5 @@
 
 -dontwarn com.baidu.**
 -keep class com.baidu.** {*;}
+
+#ping++ end
