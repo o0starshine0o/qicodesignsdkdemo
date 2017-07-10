@@ -17,7 +17,7 @@
 ```gradle
 dependencies {
     ...
-    compile 'com.qicode:qicode-sign:1.0.1'
+    compile 'com.qicode.sdk:qicode-sign:1.0.2'
     ...
 }
 ```
